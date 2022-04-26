@@ -64,21 +64,6 @@ class functions {
     }
 
 
-    public function getEditIP(){
-        if(isset($_GET['editip'])){
-            try{
-                $id = $_GET['editip']; 
-                $stmt = $this->conn->prepare("SELECT * FROM ip_details where ip_id = ?");
-                $stmt->execute([$id]);
-                $row = $stmt->fetch();
-                return $row;
-           
-            }catch (PDOException $e){
-                echo $e->getMessage();
-            }
-        }
-    }
-
     public function updateIP(){
         if(isset($_POST['editip-btn'])){
             $ipid = $_GET['editip'];
