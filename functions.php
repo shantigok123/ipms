@@ -63,19 +63,6 @@ class functions {
         }
     }
 
-    public function fetchSearchIP(){
-        if(isset($_POST['searchbtn'])){
-            $toSearch =  $_POST['searchip'];
-            try{
-                $stmt = $this->conn->prepare("SELECT * FROM ip_details where ip_address like ? or assigned_user like ?
-                or department like ? or remarks like ? order by ip_id desc");
-                $stmt->execute(['%'.$toSearch.'%','%'.$toSearch.'%','%'.$toSearch.'%','%'.$toSearch.'%']);
-                return $stmt;
-            }catch (PDOException $e){
-                echo $e->getMessage();
-            }
-        }
-    }
 
     public function getEditIP(){
         if(isset($_GET['editip'])){
