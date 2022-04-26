@@ -52,7 +52,7 @@ $func->addIP();
                     <option value="SERVICE ESTIMATOR">SERVICE ESTIMATOR</option>
                     <option value="PRINTER">PRINTER</option>
                     <option value="ROUTER">ROUTER</option>
-                    <option value="ROUTER">ROUTERs</option>
+        
                     </select>
                 </div>
                 <div class="form-group">
