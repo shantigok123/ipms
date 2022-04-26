@@ -10,20 +10,6 @@ class DBconn{
 
     public $conn;
 
-    public function openCon()
-    {
-        try
-        {
-            $this->conn = new PDO($this->host, $this->username, $this->password, $this->options);
-            return $this->conn;
-            
-        }
-        catch(PDOException $e)
-        {
-            echo "Connection error: " . $e->getMessage();
-        }
-    }
-
 }
 
 function escStr($value) {
