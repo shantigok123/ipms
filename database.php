@@ -26,7 +26,6 @@ class DBconn{
 
 }
 
-
 function escStr($value) {
     $escape_string = stripslashes(trim(($value)));
     return $escape_string;
