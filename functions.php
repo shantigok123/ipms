@@ -52,7 +52,7 @@ class functions {
         }
     }
 
-
+dsdads
     public function fetchAllIP(){
         try{
             $stmt = $this->conn->prepare("SELECT * FROM ip_details order by ip_id desc");
